@@ -1,0 +1,231 @@
+[gd_scene load_steps=8 format=3 uid="uid://cmng6ym3fi4ef"]
+
+[ext_resource type="PackedScene" uid="uid://dg8m7whyg0iha" path="res://area_2d.tscn" id="1_wxmp3"]
+[ext_resource type="PackedScene" uid="uid://b4eq6arml7lea" path="res://rigid_body_2d.tscn" id="2_udbjk"]
+[ext_resource type="PackedScene" uid="uid://c1tyj5evwwhgw" path="res://asteroid_1.tscn" id="3_8vsf5"]
+[ext_resource type="PackedScene" uid="uid://djuaa34p64d5n" path="res://asteroid_3.tscn" id="4_5n1xp"]
+[ext_resource type="PackedScene" uid="uid://cjqayiw78eo5y" path="res://asteroid_2.tscn" id="5_0gywn"]
+[ext_resource type="PackedScene" uid="uid://5jocv7jki5c3" path="res://portal.tscn" id="6_3ncer"]
+[ext_resource type="Texture2D" uid="uid://c7pkt7eqgdsn" path="res://background.png" id="7_2ime7"]
+
+[node name="main" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_wxmp3")]
+position = Vector2(506, 317)
+
+[node name="RigidBody2D" parent="." instance=ExtResource("2_udbjk")]
+position = Vector2(1018, 371)
+
+[node name="portal" parent="." instance=ExtResource("6_3ncer")]
+position = Vector2(-3546, -9344)
+
+[node name="asteroids" type="Node2D" parent="."]
+
+[node name="asteroid1" parent="asteroids" instance=ExtResource("3_8vsf5")]
+position = Vector2(2536, 8896)
+scale = Vector2(5.11196, 4.57604)
+
+[node name="asteroid3" parent="asteroids" instance=ExtResource("4_5n1xp")]
+position = Vector2(18291, 200)
+rotation = 0.666876
+scale = Vector2(6.7574, 7.03819)
+
+[node name="asteroid2" parent="asteroids" instance=ExtResource("5_0gywn")]
+position = Vector2(23581, -14096)
+rotation = 0.434772
+scale = Vector2(4.90475, 4.6057)
+
+[node name="asteroid4" parent="asteroids" instance=ExtResource("4_5n1xp")]
+position = Vector2(11113, -24478)
+rotation = -1.284
+scale = Vector2(8.03012, 8.92136)
+
+[node name="asteroid5" parent="asteroids" instance=ExtResource("5_0gywn")]
+position = Vector2(-10519, -31390)
+rotation = -1.6936
+scale = Vector2(9.13133, 9.32299)
+
+[node name="asteroid6" parent="asteroids" instance=ExtResource("3_8vsf5")]
+position = Vector2(-32023, -21022)
+scale = Vector2(8.47373, 8.22433)
+
+[node name="asteroid7" parent="asteroids" instance=ExtResource("4_5n1xp")]
+position = Vector2(-31526, 15165)
+rotation = -1.39123
+scale = Vector2(20.7851, 19.7686)
+
+[node name="asteroid8" parent="asteroids" instance=ExtResource("5_0gywn")]
+position = Vector2(-12056, 260)
+scale = Vector2(2.68819, 2.8731)
+
+[node name="asteroid9" parent="asteroids" instance=ExtResource("4_5n1xp")]
+position = Vector2(-6500, -3774)
+rotation = 0.989207
+scale = Vector2(2.4797, 2.65909)
+
+[node name="asteroid10" parent="asteroids" instance=ExtResource("5_0gywn")]
+position = Vector2(-520, -5321)
+scale = Vector2(2.05848, 2.15887)
+
+[node name="asteroid11" parent="asteroids" instance=ExtResource("4_5n1xp")]
+position = Vector2(6260, -9160)
+rotation = 0.869944
+scale = Vector2(3.11636, 3.6774)
+
+[node name="asteroid12" parent="asteroids" instance=ExtResource("3_8vsf5")]
+position = Vector2(5979, -14526)
+rotation = 1.41485
+scale = Vector2(1.86677, 1.89034)
+
+[node name="asteroid13" parent="asteroids" instance=ExtResource("4_5n1xp")]
+position = Vector2(1020, -15736)
+rotation = 0.87759
+scale = Vector2(1.90756, 1.78842)
+
+[node name="asteroid14" parent="asteroids" instance=ExtResource("3_8vsf5")]
+position = Vector2(-2607, -13748)
+
+[node name="asteroid15" parent="asteroids" instance=ExtResource("5_0gywn")]
+position = Vector2(-4841, -13564)
+rotation = -1.9804
+
+[node name="asteroid16" parent="asteroids" instance=ExtResource("4_5n1xp")]
+position = Vector2(-6662, -11985)
+
+[node name="asteroid17" parent="asteroids" instance=ExtResource("5_0gywn")]
+position = Vector2(-7160, -9360)
+
+[node name="backround" type="Node2D" parent="."]
+z_index = -1
+
+[node name="Background" type="Sprite2D" parent="backround"]
+position = Vector2(-26442, 4811)
+texture = ExtResource("7_2ime7")
+
+[node name="Background2" type="Sprite2D" parent="backround"]
+position = Vector2(-35376, -8536)
+texture = ExtResource("7_2ime7")
+
+[node name="Background3" type="Sprite2D" parent="backround"]
+position = Vector2(-31286, -3370)
+texture = ExtResource("7_2ime7")
+
+[node name="Background4" type="Sprite2D" parent="backround"]
+position = Vector2(-28703, 182)
+texture = ExtResource("7_2ime7")
+
+[node name="Background5" type="Sprite2D" parent="backround"]
+position = Vector2(-20293, 1870)
+texture = ExtResource("7_2ime7")
+
+[node name="Background6" type="Sprite2D" parent="backround"]
+position = Vector2(-18800, -4123)
+texture = ExtResource("7_2ime7")
+
+[node name="Background7" type="Sprite2D" parent="backround"]
+position = Vector2(-26556, -4451)
+texture = ExtResource("7_2ime7")
+
+[node name="Background32" type="Sprite2D" parent="backround"]
+position = Vector2(7779, -11716)
+texture = ExtResource("7_2ime7")
+
+[node name="Background8" type="Sprite2D" parent="backround"]
+position = Vector2(-26550, -10581)
+texture = ExtResource("7_2ime7")
+
+[node name="Background9" type="Sprite2D" parent="backround"]
+position = Vector2(-18908, -11442)
+texture = ExtResource("7_2ime7")
+
+[node name="Background10" type="Sprite2D" parent="backround"]
+position = Vector2(-18370, -7460)
+texture = ExtResource("7_2ime7")
+
+[node name="Background11" type="Sprite2D" parent="backround"]
+position = Vector2(-14710, -17039)
+texture = ExtResource("7_2ime7")
+
+[node name="Background12" type="Sprite2D" parent="backround"]
+position = Vector2(-6745, -16716)
+texture = ExtResource("7_2ime7")
+
+[node name="Background13" type="Sprite2D" parent="backround"]
+position = Vector2(-11158, -12411)
+texture = ExtResource("7_2ime7")
+
+[node name="Background14" type="Sprite2D" parent="backround"]
+position = Vector2(-9544, -7137)
+texture = ExtResource("7_2ime7")
+
+[node name="Background15" type="Sprite2D" parent="backround"]
+position = Vector2(-12342, -4123)
+texture = ExtResource("7_2ime7")
+
+[node name="Background16" type="Sprite2D" parent="backround"]
+position = Vector2(-2870, -9935)
+texture = ExtResource("7_2ime7")
+
+[node name="Background17" type="Sprite2D" parent="backround"]
+position = Vector2(2511, -12411)
+texture = ExtResource("7_2ime7")
+
+[node name="Background18" type="Sprite2D" parent="backround"]
+position = Vector2(1435, -8321)
+texture = ExtResource("7_2ime7")
+
+[node name="Background19" type="Sprite2D" parent="backround"]
+position = Vector2(-718, -18761)
+texture = ExtResource("7_2ime7")
+
+[node name="Background20" type="Sprite2D" parent="backround"]
+position = Vector2(5095, -21990)
+texture = ExtResource("7_2ime7")
+
+[node name="Background21" type="Sprite2D" parent="backround"]
+position = Vector2(6817, -17577)
+texture = ExtResource("7_2ime7")
+
+[node name="Background22" type="Sprite2D" parent="backround"]
+position = Vector2(13275, -15748)
+texture = ExtResource("7_2ime7")
+
+[node name="Background23" type="Sprite2D" parent="backround"]
+position = Vector2(-7068, 6317)
+texture = ExtResource("7_2ime7")
+
+[node name="Background24" type="Sprite2D" parent="backround"]
+position = Vector2(-6422, 828)
+texture = ExtResource("7_2ime7")
+
+[node name="Background25" type="Sprite2D" parent="backround"]
+position = Vector2(-933, 1474)
+texture = ExtResource("7_2ime7")
+
+[node name="Background26" type="Sprite2D" parent="backround"]
+position = Vector2(-825, -2724)
+texture = ExtResource("7_2ime7")
+
+[node name="Background27" type="Sprite2D" parent="backround"]
+position = Vector2(7404, -641)
+texture = ExtResource("7_2ime7")
+
+[node name="Background28" type="Sprite2D" parent="backround"]
+position = Vector2(7099, -6483)
+texture = ExtResource("7_2ime7")
+
+[node name="Background29" type="Sprite2D" parent="backround"]
+position = Vector2(14871, -3486)
+texture = ExtResource("7_2ime7")
+
+[node name="Background30" type="Sprite2D" parent="backround"]
+position = Vector2(17614, -8210)
+texture = ExtResource("7_2ime7")
+
+[node name="Background31" type="Sprite2D" parent="backround"]
+position = Vector2(14668, -9683)
+texture = ExtResource("7_2ime7")
+
+[node name="Background" type="Sprite2D" parent="backround/Background31"]
+position = Vector2(-19984, 5333)
+texture = ExtResource("7_2ime7")

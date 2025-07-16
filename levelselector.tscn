@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://ba8nkymsk3qq5"]
+
+[ext_resource type="Script" path="res://levelselector.gd" id="1_ys62h"]
+
+[node name="CenterContainer" type="CenterContainer"]
+offset_left = 854.0
+offset_top = 105.0
+offset_right = 974.0
+offset_bottom = 255.0
+scale = Vector2(10, 10)
+script = ExtResource("1_ys62h")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(120, 150)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/MarginContainer"]
+layout_mode = 2

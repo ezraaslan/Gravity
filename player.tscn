@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://qeeqlk4pbl2v"]
+
+[ext_resource type="Script" path="res://area_2d.gd" id="1_jy57j"]
+[ext_resource type="Texture2D" uid="uid://3s7godjs6mp5" path="res://player.png" id="2_rvtha"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wru0u"]
+radius = 232.845
+
+[node name="Player" type="Area2D"]
+z_index = 2
+scale = Vector2(2, 2)
+collision_layer = 2
+gravity_space_override = 3
+gravity_point = true
+gravity = 1500.0
+script = ExtResource("1_jy57j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_wru0u")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-7, 1)
+scale = Vector2(1.19141, 1.15234)
+texture = ExtResource("2_rvtha")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

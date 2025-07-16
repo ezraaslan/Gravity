@@ -1,0 +1,200 @@
+[gd_scene load_steps=11 format=3 uid="uid://bu5tk8afdrhs8"]
+
+[ext_resource type="PackedScene" uid="uid://dg8m7whyg0iha" path="res://area_2d.tscn" id="1_ly8mj"]
+[ext_resource type="PackedScene" uid="uid://b4eq6arml7lea" path="res://rigid_body_2d.tscn" id="2_og45c"]
+[ext_resource type="PackedScene" uid="uid://c1tyj5evwwhgw" path="res://asteroid_1.tscn" id="3_ojvh1"]
+[ext_resource type="PackedScene" uid="uid://cjqayiw78eo5y" path="res://asteroid_2.tscn" id="4_vs52x"]
+[ext_resource type="PackedScene" uid="uid://djuaa34p64d5n" path="res://asteroid_3.tscn" id="5_k27nx"]
+[ext_resource type="PackedScene" uid="uid://5jocv7jki5c3" path="res://portal.tscn" id="6_hb0ew"]
+[ext_resource type="PackedScene" uid="uid://cy3yosh503471" path="res://movablerock.tscn" id="7_16ybt"]
+[ext_resource type="PackedScene" uid="uid://cx8u7h3tgxch" path="res://alien.tscn" id="8_3hmln"]
+[ext_resource type="Texture2D" uid="uid://c7pkt7eqgdsn" path="res://background.png" id="9_pcifb"]
+[ext_resource type="PackedScene" uid="uid://c0grfdn2drogt" path="res://black_hole.tscn" id="10_igkwm"]
+
+[node name="main" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_ly8mj")]
+position = Vector2(684, 262)
+
+[node name="RigidBody2D" parent="." instance=ExtResource("2_og45c")]
+position = Vector2(2, 3482)
+
+[node name="asteroids" type="Node2D" parent="."]
+
+[node name="asteroid1" parent="asteroids" instance=ExtResource("3_ojvh1")]
+position = Vector2(-2709, -2870)
+
+[node name="asteroid3" parent="asteroids" instance=ExtResource("5_k27nx")]
+position = Vector2(2408, -3238)
+rotation = 1.66111
+
+[node name="asteroid4" parent="asteroids" instance=ExtResource("4_vs52x")]
+position = Vector2(4532, -2026)
+
+[node name="asteroid5" parent="asteroids" instance=ExtResource("5_k27nx")]
+position = Vector2(5173, 354)
+rotation = -0.128414
+
+[node name="asteroid6" parent="asteroids" instance=ExtResource("3_ojvh1")]
+position = Vector2(4033, 3205)
+rotation = 2.89852
+
+[node name="asteroid7" parent="asteroids" instance=ExtResource("3_ojvh1")]
+position = Vector2(-4206, -501)
+rotation = 1.11792
+
+[node name="asteroid8" parent="asteroids" instance=ExtResource("4_vs52x")]
+position = Vector2(-3907, 1836)
+rotation = 2.5594
+
+[node name="asteroid9" parent="asteroids" instance=ExtResource("5_k27nx")]
+position = Vector2(-3379, 4032)
+rotation = -0.883952
+
+[node name="asteroid10" parent="asteroids" instance=ExtResource("5_k27nx")]
+position = Vector2(2251, 4716)
+rotation = 0.795565
+
+[node name="asteroid11" parent="asteroids" instance=ExtResource("4_vs52x")]
+position = Vector2(-714, 5143)
+rotation = 0.768221
+
+[node name="asteroid23" parent="asteroids" instance=ExtResource("3_ojvh1")]
+position = Vector2(8884, 6481)
+
+[node name="asteroid24" parent="asteroids" instance=ExtResource("4_vs52x")]
+position = Vector2(9494, 3865)
+
+[node name="asteroid25" parent="asteroids" instance=ExtResource("5_k27nx")]
+position = Vector2(9215, 1554)
+
+[node name="asteroid26" parent="asteroids" instance=ExtResource("5_k27nx")]
+position = Vector2(9138, -402)
+rotation = 2.46811
+
+[node name="asteroid27" parent="asteroids" instance=ExtResource("4_vs52x")]
+position = Vector2(8834, -3145)
+rotation = 2.44474
+
+[node name="asteroid28" parent="asteroids" instance=ExtResource("3_ojvh1")]
+position = Vector2(8428, -8453)
+rotation = -1.89742
+scale = Vector2(3, 3)
+
+[node name="asteroid29" parent="asteroids" instance=ExtResource("5_k27nx")]
+position = Vector2(240, -9241)
+rotation = 1.13286
+scale = Vector2(3, 3)
+
+[node name="asteroid30" parent="asteroids" instance=ExtResource("4_vs52x")]
+position = Vector2(-8242, -6548)
+scale = Vector2(3, 3)
+
+[node name="asteroid31" parent="asteroids" instance=ExtResource("5_k27nx")]
+position = Vector2(-9195, -2442)
+scale = Vector2(2, 2)
+
+[node name="asteroid32" parent="asteroids" instance=ExtResource("5_k27nx")]
+position = Vector2(-9762, 1531)
+
+[node name="asteroid33" parent="asteroids" instance=ExtResource("3_ojvh1")]
+position = Vector2(-10157, 4620)
+
+[node name="asteroid34" parent="asteroids" instance=ExtResource("4_vs52x")]
+position = Vector2(-9043, 6596)
+
+[node name="asteroid35" parent="asteroids" instance=ExtResource("4_vs52x")]
+position = Vector2(-7894, 7638)
+rotation = 0.921854
+
+[node name="asteroid36" parent="asteroids" instance=ExtResource("5_k27nx")]
+position = Vector2(-4339, 9685)
+rotation = -1.34788
+scale = Vector2(2, 2)
+
+[node name="asteroid37" parent="asteroids" instance=ExtResource("4_vs52x")]
+position = Vector2(4498, 10512)
+scale = Vector2(3, 3)
+
+[node name="asteroid38" parent="asteroids" instance=ExtResource("3_ojvh1")]
+position = Vector2(-610, 10992)
+rotation = 1.36508
+
+[node name="portal" parent="." instance=ExtResource("6_hb0ew")]
+position = Vector2(-805, 8272)
+
+[node name="alien" parent="." instance=ExtResource("8_3hmln")]
+position = Vector2(1154, 4455)
+
+[node name="alien2" parent="." instance=ExtResource("8_3hmln")]
+position = Vector2(-1233, 3940)
+
+[node name="background" type="Node2D" parent="."]
+z_index = -1
+
+[node name="Background" type="Sprite2D" parent="background"]
+position = Vector2(-357, 6844)
+texture = ExtResource("9_pcifb")
+
+[node name="Background2" type="Sprite2D" parent="background"]
+position = Vector2(-8140, 4734)
+texture = ExtResource("9_pcifb")
+
+[node name="Background3" type="Sprite2D" parent="background"]
+position = Vector2(-5688, -1025)
+texture = ExtResource("9_pcifb")
+
+[node name="Background4" type="Sprite2D" parent="background"]
+position = Vector2(-2039, -5044)
+texture = ExtResource("9_pcifb")
+
+[node name="Background5" type="Sprite2D" parent="background"]
+position = Vector2(-329, 1284)
+texture = ExtResource("9_pcifb")
+
+[node name="Background6" type="Sprite2D" parent="background"]
+position = Vector2(4746, 3708)
+texture = ExtResource("9_pcifb")
+
+[node name="Background7" type="Sprite2D" parent="background"]
+position = Vector2(4946, -1994)
+texture = ExtResource("9_pcifb")
+
+[node name="Background8" type="Sprite2D" parent="background"]
+position = Vector2(3235, -4446)
+texture = ExtResource("9_pcifb")
+
+[node name="Background9" type="Sprite2D" parent="background"]
+position = Vector2(12047, -1537)
+texture = ExtResource("9_pcifb")
+
+[node name="Background10" type="Sprite2D" parent="background"]
+position = Vector2(11438, 4666)
+texture = ExtResource("9_pcifb")
+
+[node name="Background11" type="Sprite2D" parent="background"]
+position = Vector2(9421, 9994)
+texture = ExtResource("9_pcifb")
+
+[node name="Background12" type="Sprite2D" parent="background"]
+position = Vector2(-5001, 11706)
+texture = ExtResource("9_pcifb")
+
+[node name="Background13" type="Sprite2D" parent="background"]
+position = Vector2(-12460, 8408)
+texture = ExtResource("9_pcifb")
+
+[node name="Background14" type="Sprite2D" parent="background"]
+position = Vector2(-12003, -1790)
+texture = ExtResource("9_pcifb")
+
+[node name="Background15" type="Sprite2D" parent="background"]
+position = Vector2(-12688, 1330)
+texture = ExtResource("9_pcifb")
+
+[node name="black hole" parent="." instance=ExtResource("10_igkwm")]
+position = Vector2(124, 488)
+
+[node name="movablerock" parent="." instance=ExtResource("7_16ybt")]
+position = Vector2(-40.9999, -3333)
+rotation = 2.60413

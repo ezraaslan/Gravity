@@ -1,0 +1,299 @@
+[gd_scene load_steps=8 format=3 uid="uid://b80avy7hj01om"]
+
+[ext_resource type="PackedScene" uid="uid://dg8m7whyg0iha" path="res://area_2d.tscn" id="1_bxfvq"]
+[ext_resource type="PackedScene" uid="uid://b4eq6arml7lea" path="res://rigid_body_2d.tscn" id="2_ao77m"]
+[ext_resource type="PackedScene" uid="uid://c1tyj5evwwhgw" path="res://asteroid_1.tscn" id="5_ca6at"]
+[ext_resource type="PackedScene" uid="uid://cjqayiw78eo5y" path="res://asteroid_2.tscn" id="6_8bk35"]
+[ext_resource type="PackedScene" uid="uid://djuaa34p64d5n" path="res://asteroid_3.tscn" id="7_sdjrm"]
+[ext_resource type="PackedScene" uid="uid://5jocv7jki5c3" path="res://portal.tscn" id="8_55now"]
+[ext_resource type="Texture2D" uid="uid://c7pkt7eqgdsn" path="res://background.png" id="9_esyio"]
+
+[node name="main" type="Node2D"]
+
+[node name="RigidBody2D" parent="." instance=ExtResource("2_ao77m")]
+position = Vector2(1649, -1491)
+
+[node name="Player" parent="." instance=ExtResource("1_bxfvq")]
+position = Vector2(586, 321)
+
+[node name="portal" parent="." instance=ExtResource("8_55now")]
+position = Vector2(9245, 16180)
+
+[node name="asteroids" type="Node2D" parent="."]
+
+[node name="asteroid1" parent="asteroids" instance=ExtResource("5_ca6at")]
+position = Vector2(325, 2845)
+rotation = -0.00785043
+
+[node name="asteroid2" parent="asteroids" instance=ExtResource("6_8bk35")]
+position = Vector2(2976, 1134)
+
+[node name="asteroid3" parent="asteroids" instance=ExtResource("6_8bk35")]
+position = Vector2(-1542, 1642)
+rotation = 2.45988
+
+[node name="asteroid4" parent="asteroids" instance=ExtResource("5_ca6at")]
+position = Vector2(-4599, -3040)
+rotation = 2.12161
+scale = Vector2(2.3469, 2.7508)
+
+[node name="asteroid5" parent="asteroids" instance=ExtResource("7_sdjrm")]
+position = Vector2(6538, -3226)
+scale = Vector2(3.50018, 3.82145)
+
+[node name="asteroid6" parent="asteroids" instance=ExtResource("6_8bk35")]
+position = Vector2(4861, -12166)
+scale = Vector2(3.40094, 3.04342)
+
+[node name="asteroid7" parent="asteroids" instance=ExtResource("7_sdjrm")]
+position = Vector2(-7609, -10642)
+scale = Vector2(3.86042, 4.67692)
+
+[node name="asteroid8" parent="asteroids" instance=ExtResource("6_8bk35")]
+position = Vector2(-4583, -17456)
+
+[node name="asteroid9" parent="asteroids" instance=ExtResource("5_ca6at")]
+position = Vector2(3233, -16089)
+rotation = -0.815513
+
+[node name="asteroid10" parent="asteroids" instance=ExtResource("7_sdjrm")]
+position = Vector2(-782, -19977)
+rotation = 0.782417
+scale = Vector2(2.00013, 2.16739)
+
+[node name="asteroid11" parent="asteroids" instance=ExtResource("5_ca6at")]
+position = Vector2(5159, -24940)
+rotation = -2.04259
+scale = Vector2(3.24033, 3.20275)
+
+[node name="asteroid12" parent="asteroids" instance=ExtResource("6_8bk35")]
+position = Vector2(20928, -26677)
+rotation = -1.20583
+scale = Vector2(8.00224, 8.43597)
+
+[node name="asteroid13" parent="asteroids" instance=ExtResource("5_ca6at")]
+position = Vector2(23462, -8282)
+rotation = -0.76113
+scale = Vector2(4.22109, 3.22696)
+
+[node name="asteroid14" parent="asteroids" instance=ExtResource("7_sdjrm")]
+position = Vector2(8925, -13268)
+rotation = 1.227
+
+[node name="asteroid15" parent="asteroids" instance=ExtResource("7_sdjrm")]
+position = Vector2(17907, -10604)
+rotation = -1.74037
+scale = Vector2(1.39638, 1.56601)
+
+[node name="asteroid16" parent="asteroids" instance=ExtResource("7_sdjrm")]
+position = Vector2(11171, -6418)
+rotation = 0.747626
+scale = Vector2(1.91843, 1.83102)
+
+[node name="asteroid17" parent="asteroids" instance=ExtResource("5_ca6at")]
+position = Vector2(15129, 2563)
+rotation = -1.08272
+scale = Vector2(2.95423, 2.91542)
+
+[node name="asteroid18" parent="asteroids" instance=ExtResource("6_8bk35")]
+position = Vector2(25846, 1117)
+rotation = -0.459784
+scale = Vector2(2.65958, 3.0124)
+
+[node name="asteroid19" parent="asteroids" instance=ExtResource("7_sdjrm")]
+position = Vector2(23514, 7700)
+rotation = 0.387999
+scale = Vector2(3.02684, 3.32282)
+
+[node name="asteroid20" parent="asteroids" instance=ExtResource("6_8bk35")]
+position = Vector2(22486, 14550)
+rotation = -1.13708
+scale = Vector2(2.30738, 3.07517)
+
+[node name="asteroid21" parent="asteroids" instance=ExtResource("5_ca6at")]
+position = Vector2(9687, 9757)
+scale = Vector2(2.45041, 2.78118)
+
+[node name="asteroid22" parent="asteroids" instance=ExtResource("7_sdjrm")]
+position = Vector2(12643, 19948)
+rotation = 1.26811
+scale = Vector2(3.77664, 4.07348)
+
+[node name="asteroid23" parent="asteroids" instance=ExtResource("6_8bk35")]
+position = Vector2(17042, 18396)
+
+[node name="asteroid24" parent="asteroids" instance=ExtResource("5_ca6at")]
+position = Vector2(18924, 16087)
+
+[node name="asteroid3" parent="asteroids/asteroid24" instance=ExtResource("7_sdjrm")]
+position = Vector2(-21239, -5346)
+scale = Vector2(5.59699, 5.40945)
+
+[node name="asteroid2" parent="asteroids/asteroid24/asteroid3" instance=ExtResource("6_8bk35")]
+position = Vector2(781.849, 1646.19)
+rotation = -1.53277
+scale = Vector2(0.408523, 0.471516)
+skew = 0.00267959
+
+[node name="background" type="Node2D" parent="."]
+z_index = -1
+
+[node name="Background" type="Sprite2D" parent="background"]
+position = Vector2(3970, 17391)
+texture = ExtResource("9_esyio")
+
+[node name="Background24" type="Sprite2D" parent="background"]
+position = Vector2(549, 628)
+texture = ExtResource("9_esyio")
+
+[node name="Background2" type="Sprite2D" parent="background"]
+position = Vector2(11293, 16848)
+texture = ExtResource("9_esyio")
+
+[node name="Background3" type="Sprite2D" parent="background"]
+position = Vector2(16650, 13729)
+texture = ExtResource("9_esyio")
+
+[node name="Background4" type="Sprite2D" parent="background"]
+position = Vector2(2140, 12848)
+texture = ExtResource("9_esyio")
+
+[node name="Background5" type="Sprite2D" parent="background"]
+position = Vector2(9259, 11221)
+texture = ExtResource("9_esyio")
+
+[node name="Background6" type="Sprite2D" parent="background"]
+position = Vector2(4445, 7016)
+texture = ExtResource("9_esyio")
+
+[node name="Background7" type="Sprite2D" parent="background"]
+position = Vector2(17122, 7936)
+texture = ExtResource("9_esyio")
+
+[node name="Background8" type="Sprite2D" parent="background"]
+position = Vector2(4852, 1660)
+texture = ExtResource("9_esyio")
+
+[node name="Background9" type="Sprite2D" parent="background"]
+position = Vector2(10209, 2134)
+texture = ExtResource("9_esyio")
+
+[node name="Background10" type="Sprite2D" parent="background"]
+position = Vector2(21736, 3355)
+texture = ExtResource("9_esyio")
+
+[node name="Background11" type="Sprite2D" parent="background"]
+position = Vector2(20108, -2137)
+texture = ExtResource("9_esyio")
+
+[node name="Background12" type="Sprite2D" parent="background"]
+position = Vector2(13463, -2680)
+texture = ExtResource("9_esyio")
+
+[node name="Background13" type="Sprite2D" parent="background"]
+position = Vector2(5530, -3019)
+texture = ExtResource("9_esyio")
+
+[node name="Background14" type="Sprite2D" parent="background"]
+position = Vector2(38, -3493)
+texture = ExtResource("9_esyio")
+
+[node name="Background15" type="Sprite2D" parent="background"]
+position = Vector2(2072, -8986)
+texture = ExtResource("9_esyio")
+
+[node name="Background16" type="Sprite2D" parent="background"]
+position = Vector2(-3692, -9664)
+texture = ExtResource("9_esyio")
+
+[node name="Background17" type="Sprite2D" parent="background"]
+position = Vector2(-2132, -15495)
+texture = ExtResource("9_esyio")
+
+[node name="Background18" type="Sprite2D" parent="background"]
+position = Vector2(3292, -19021)
+texture = ExtResource("9_esyio")
+
+[node name="Background19" type="Sprite2D" parent="background"]
+position = Vector2(16514, -8782)
+texture = ExtResource("9_esyio")
+
+[node name="Background20" type="Sprite2D" parent="background"]
+position = Vector2(9124, -9257)
+texture = ExtResource("9_esyio")
+
+[node name="Background21" type="Sprite2D" parent="background"]
+position = Vector2(11226, -18779)
+texture = ExtResource("9_esyio")
+
+[node name="Background25" type="Sprite2D" parent="background"]
+position = Vector2(11226, -18779)
+texture = ExtResource("9_esyio")
+
+[node name="Background22" type="Sprite2D" parent="background"]
+position = Vector2(11274, -13366)
+texture = ExtResource("9_esyio")
+
+[node name="Background26" type="Sprite2D" parent="background"]
+position = Vector2(11274, -13366)
+texture = ExtResource("9_esyio")
+
+[node name="Background27" type="Sprite2D" parent="background"]
+position = Vector2(-7407, -14786)
+texture = ExtResource("9_esyio")
+
+[node name="Background28" type="Sprite2D" parent="background"]
+position = Vector2(-8087, -10527)
+texture = ExtResource("9_esyio")
+
+[node name="Background29" type="Sprite2D" parent="background"]
+position = Vector2(-8147, -4456)
+texture = ExtResource("9_esyio")
+
+[node name="Background30" type="Sprite2D" parent="background"]
+position = Vector2(-8147, -4456)
+texture = ExtResource("9_esyio")
+
+[node name="Background23" type="Sprite2D" parent="background"]
+position = Vector2(18413, -13936)
+texture = ExtResource("9_esyio")
+
+[node name="Background" type="Sprite2D" parent="background/Background23"]
+position = Vector2(-23162, -6570)
+texture = ExtResource("9_esyio")
+
+[node name="Background" type="Sprite2D" parent="background/Background23/Background"]
+position = Vector2(32295, 15764)
+texture = ExtResource("9_esyio")
+
+[node name="Background2" type="Sprite2D" parent="background/Background23/Background"]
+position = Vector2(33760, 5706)
+texture = ExtResource("9_esyio")
+
+[node name="Background3" type="Sprite2D" parent="background/Background23/Background"]
+position = Vector2(33458, 10720)
+texture = ExtResource("9_esyio")
+
+[node name="Background4" type="Sprite2D" parent="background/Background23/Background"]
+position = Vector2(34545, 21503)
+texture = ExtResource("9_esyio")
+
+[node name="Background5" type="Sprite2D" parent="background/Background23/Background"]
+position = Vector2(34243, 26688)
+texture = ExtResource("9_esyio")
+
+[node name="Background6" type="Sprite2D" parent="background/Background23/Background"]
+position = Vector2(31887, 32004)
+texture = ExtResource("9_esyio")
+
+[node name="Background7" type="Sprite2D" parent="background/Background23/Background"]
+position = Vector2(30317, 37622)
+texture = ExtResource("9_esyio")
+
+[node name="Background9" type="Sprite2D" parent="background/Background23/Background"]
+position = Vector2(24834, 38348)
+texture = ExtResource("9_esyio")
+
+[node name="Background8" type="Sprite2D" parent="background/Background23/Background"]
+position = Vector2(28354, 27504)
+texture = ExtResource("9_esyio")

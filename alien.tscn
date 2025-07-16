@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://cx8u7h3tgxch"]
+
+[ext_resource type="Script" path="res://alien.gd" id="1_0ia0e"]
+[ext_resource type="Texture2D" uid="uid://b83ioxp5srcb" path="res://alien.png" id="1_4q5c4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qusae"]
+radius = 97.0
+height = 194.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pnf50"]
+radius = 151.0
+height = 418.0
+
+[node name="alien" type="CharacterBody2D"]
+z_index = 1
+collision_layer = 3
+collision_mask = 3
+motion_mode = 1
+script = ExtResource("1_0ia0e")
+
+[node name="ship" type="Sprite2D" parent="."]
+texture = ExtResource("1_4q5c4")
+region_enabled = true
+region_rect = Rect2(44, 3.5, 641, 455)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-26, -12)
+shape = SubResource("CapsuleShape2D_qusae")
+
+[node name="hitbox" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(-30, 8)
+shape = SubResource("CapsuleShape2D_pnf50")
+
+[connection signal="area_entered" from="hitbox" to="." method="_on_hitbox_area_entered"]

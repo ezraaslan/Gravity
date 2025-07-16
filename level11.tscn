@@ -1,0 +1,256 @@
+[gd_scene load_steps=10 format=3 uid="uid://dtgvitbaq3ivv"]
+
+[ext_resource type="PackedScene" uid="uid://5jocv7jki5c3" path="res://portal.tscn" id="1_5gens"]
+[ext_resource type="PackedScene" uid="uid://dg8m7whyg0iha" path="res://area_2d.tscn" id="1_6qyta"]
+[ext_resource type="PackedScene" uid="uid://b4eq6arml7lea" path="res://rigid_body_2d.tscn" id="2_mqesh"]
+[ext_resource type="PackedScene" uid="uid://c3amlit58h11q" path="res://comet.tscn" id="3_x618b"]
+[ext_resource type="Texture2D" uid="uid://c7pkt7eqgdsn" path="res://background.png" id="4_fxx2s"]
+[ext_resource type="PackedScene" uid="uid://c1tyj5evwwhgw" path="res://asteroid_1.tscn" id="6_ar8ab"]
+[ext_resource type="PackedScene" uid="uid://cjqayiw78eo5y" path="res://asteroid_2.tscn" id="7_8g5uq"]
+[ext_resource type="PackedScene" uid="uid://djuaa34p64d5n" path="res://asteroid_3.tscn" id="8_l3a8n"]
+[ext_resource type="PackedScene" uid="uid://c0grfdn2drogt" path="res://black_hole.tscn" id="9_pn8jx"]
+
+[node name="main" type="Node2D"]
+
+[node name="portal" parent="." instance=ExtResource("1_5gens")]
+position = Vector2(19227, 6477)
+
+[node name="Player" parent="." instance=ExtResource("1_6qyta")]
+position = Vector2(-6413, -11669)
+
+[node name="RigidBody2D" parent="." instance=ExtResource("2_mqesh")]
+position = Vector2(-6112, -11742)
+
+[node name="comets" type="Node2D" parent="."]
+
+[node name="comet" parent="comets" instance=ExtResource("3_x618b")]
+position = Vector2(-9458, 3473)
+rotation = 0.608694
+
+[node name="comet2" parent="comets" instance=ExtResource("3_x618b")]
+position = Vector2(-9528, -1460)
+rotation = 0.608694
+
+[node name="comet3" parent="comets" instance=ExtResource("3_x618b")]
+position = Vector2(-9861, -6078)
+rotation = 0.608694
+
+[node name="comet4" parent="comets" instance=ExtResource("3_x618b")]
+position = Vector2(-9392, -9917)
+rotation = 0.608694
+
+[node name="comet5" parent="comets" instance=ExtResource("3_x618b")]
+position = Vector2(2729, 10207)
+rotation = -1.03385
+
+[node name="comet6" parent="comets" instance=ExtResource("3_x618b")]
+position = Vector2(9163, 10119)
+rotation = -1.03385
+
+[node name="comet7" parent="comets" instance=ExtResource("3_x618b")]
+position = Vector2(15066, 10035)
+rotation = -1.03385
+
+[node name="comet8" parent="comets" instance=ExtResource("3_x618b")]
+position = Vector2(-3347, 10010)
+rotation = -1.03385
+
+[node name="black holes" type="Node2D" parent="."]
+
+[node name="black hole" parent="black holes" instance=ExtResource("9_pn8jx")]
+position = Vector2(-122, 1495)
+rotation = -1.63044
+
+[node name="black hole2" parent="black holes" instance=ExtResource("9_pn8jx")]
+position = Vector2(12323, -8152)
+rotation = -1.63044
+
+[node name="backgrounds" type="Node2D" parent="."]
+z_index = -1
+
+[node name="Background" type="Sprite2D" parent="backgrounds"]
+position = Vector2(-4458, 6267)
+texture = ExtResource("4_fxx2s")
+
+[node name="Background17" type="Sprite2D" parent="backgrounds"]
+position = Vector2(-8425, -10108)
+texture = ExtResource("4_fxx2s")
+
+[node name="Background2" type="Sprite2D" parent="backgrounds"]
+position = Vector2(3882, 6063)
+texture = ExtResource("4_fxx2s")
+
+[node name="Background3" type="Sprite2D" parent="backgrounds"]
+position = Vector2(12257, 5114)
+texture = ExtResource("4_fxx2s")
+
+[node name="Background4" type="Sprite2D" parent="backgrounds"]
+position = Vector2(20529, 5317)
+texture = ExtResource("4_fxx2s")
+
+[node name="Background5" type="Sprite2D" parent="backgrounds"]
+position = Vector2(-4424, 29)
+texture = ExtResource("4_fxx2s")
+
+[node name="Background6" type="Sprite2D" parent="backgrounds"]
+position = Vector2(-4729, -5599)
+texture = ExtResource("4_fxx2s")
+
+[node name="Background7" type="Sprite2D" parent="backgrounds"]
+position = Vector2(-4390, -11193)
+texture = ExtResource("4_fxx2s")
+
+[node name="Background8" type="Sprite2D" parent="backgrounds"]
+position = Vector2(4289, -10990)
+texture = ExtResource("4_fxx2s")
+
+[node name="Background9" type="Sprite2D" parent="backgrounds"]
+position = Vector2(13172, -11261)
+texture = ExtResource("4_fxx2s")
+
+[node name="Background10" type="Sprite2D" parent="backgrounds"]
+position = Vector2(20732, -10583)
+texture = ExtResource("4_fxx2s")
+
+[node name="Background11" type="Sprite2D" parent="backgrounds"]
+position = Vector2(4357, -5159)
+texture = ExtResource("4_fxx2s")
+
+[node name="Background12" type="Sprite2D" parent="backgrounds"]
+position = Vector2(4120, 130)
+texture = ExtResource("4_fxx2s")
+
+[node name="Background13" type="Sprite2D" parent="backgrounds"]
+position = Vector2(12460, -853)
+texture = ExtResource("4_fxx2s")
+
+[node name="Background14" type="Sprite2D" parent="backgrounds"]
+position = Vector2(12494, -6582)
+texture = ExtResource("4_fxx2s")
+
+[node name="Background15" type="Sprite2D" parent="backgrounds"]
+position = Vector2(21071, -683)
+texture = ExtResource("4_fxx2s")
+
+[node name="Background16" type="Sprite2D" parent="backgrounds"]
+position = Vector2(20868, -6311)
+texture = ExtResource("4_fxx2s")
+
+[node name="asteroids" type="Node2D" parent="."]
+
+[node name="asteroid1" parent="asteroids" instance=ExtResource("6_ar8ab")]
+position = Vector2(-812, -8410)
+
+[node name="asteroid2" parent="asteroids" instance=ExtResource("7_8g5uq")]
+position = Vector2(5690, -3889)
+
+[node name="asteroid3" parent="asteroids" instance=ExtResource("8_l3a8n")]
+position = Vector2(12065, 814)
+
+[node name="asteroid4" parent="asteroids" instance=ExtResource("7_8g5uq")]
+position = Vector2(2168, 21986)
+rotation = 1.35221
+scale = Vector2(10, 10)
+
+[node name="asteroid7" parent="asteroids" instance=ExtResource("7_8g5uq")]
+position = Vector2(-20242, 322)
+rotation = 1.81415
+scale = Vector2(10, 10)
+
+[node name="asteroid5" parent="asteroids" instance=ExtResource("7_8g5uq")]
+position = Vector2(16360, 21704)
+rotation = 1.35221
+scale = Vector2(10, 10)
+
+[node name="asteroid6" parent="asteroids" instance=ExtResource("7_8g5uq")]
+position = Vector2(43684, -3869)
+rotation = -0.277446
+scale = Vector2(15, 15)
+
+[node name="asteroid8" parent="asteroids" instance=ExtResource("7_8g5uq")]
+position = Vector2(12708, -33551)
+rotation = -1.78092
+scale = Vector2(15, 15)
+
+[node name="asteroid9" parent="asteroids" instance=ExtResource("8_l3a8n")]
+position = Vector2(-7289, -16452)
+rotation = 0.855844
+scale = Vector2(5, 5)
+
+[node name="asteroid10" parent="asteroids" instance=ExtResource("6_ar8ab")]
+position = Vector2(-9179, -10100)
+rotation = 0.939729
+
+[node name="asteroid11" parent="asteroids" instance=ExtResource("6_ar8ab")]
+position = Vector2(-3265, 7583)
+
+[node name="asteroid12" parent="asteroids" instance=ExtResource("7_8g5uq")]
+position = Vector2(3142, 7854)
+
+[node name="asteroid13" parent="asteroids" instance=ExtResource("7_8g5uq")]
+position = Vector2(9177, 7380)
+
+[node name="asteroid14" parent="asteroids" instance=ExtResource("8_l3a8n")]
+position = Vector2(15245, 7041)
+
+[node name="asteroid15" parent="asteroids" instance=ExtResource("7_8g5uq")]
+position = Vector2(-7300, 3187)
+
+[node name="asteroid16" parent="asteroids" instance=ExtResource("6_ar8ab")]
+position = Vector2(-8012, -1831)
+
+[node name="asteroid17" parent="asteroids" instance=ExtResource("6_ar8ab")]
+position = Vector2(-8046, -6069)
+
+[node name="asteroid18" parent="asteroids" instance=ExtResource("8_l3a8n")]
+position = Vector2(5611, -13024)
+rotation = 1.12179
+
+[node name="asteroid19" parent="asteroids" instance=ExtResource("7_8g5uq")]
+position = Vector2(16291, -12583)
+
+[node name="asteroid20" parent="asteroids" instance=ExtResource("6_ar8ab")]
+position = Vector2(22461, -11702)
+
+[node name="asteroid21" parent="asteroids" instance=ExtResource("6_ar8ab")]
+position = Vector2(23139, -5803)
+
+[node name="asteroid22" parent="asteroids" instance=ExtResource("6_ar8ab")]
+position = Vector2(23817, 7521)
+
+[node name="asteroid23" parent="asteroids" instance=ExtResource("8_l3a8n")]
+position = Vector2(23207, 944)
+
+[node name="asteroid24" parent="asteroids" instance=ExtResource("8_l3a8n")]
+position = Vector2(10561, -12821)
+rotation = 0.836642
+
+[node name="asteroid25" parent="asteroids" instance=ExtResource("7_8g5uq")]
+position = Vector2(8425, -13465)
+
+[node name="asteroid26" parent="asteroids" instance=ExtResource("7_8g5uq")]
+position = Vector2(13714, -12956)
+
+[node name="asteroid27" parent="asteroids" instance=ExtResource("7_8g5uq")]
+position = Vector2(19545, -12143)
+rotation = -1.58311
+
+[node name="asteroid28" parent="asteroids" instance=ExtResource("7_8g5uq")]
+position = Vector2(22461, -8549)
+
+[node name="asteroid29" parent="asteroids" instance=ExtResource("7_8g5uq")]
+position = Vector2(22868, -1463)
+
+[node name="asteroid30" parent="asteroids" instance=ExtResource("7_8g5uq")]
+position = Vector2(22597, 4877)
+
+[node name="asteroid31" parent="asteroids" instance=ExtResource("7_8g5uq")]
+position = Vector2(-6322, -14245)
+
+[node name="asteroid32" parent="asteroids" instance=ExtResource("7_8g5uq")]
+position = Vector2(1272, -13397)
+rotation = -1.71174
+
+[node name="asteroid33" parent="asteroids" instance=ExtResource("8_l3a8n")]
+position = Vector2(-2356, -14143)
+rotation = 1.67998
