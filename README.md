@@ -1,1 +1,1 @@
-# Gravity
+# Gravity is a difficult but rewarding platforming game about a lost astronaut on a journey to find his spaceship and return to planet Earth. Sadly, his jetpack has lost all its fuel and the only way to guide him home is to manipulate the gravitational field around him with the one of a kind Grav-o-Ball (patent pending). Along the way, encounter friends, foes, and other deep spaces oddities -- but be sure to have fun!
