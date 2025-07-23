@@ -1,3 +1,5 @@
 # Gravity is a difficult but rewarding platforming game about a lost astronaut on a journey to find his spaceship and return to planet Earth. Sadly, his jetpack has lost all its fuel and the only way to guide him home is to manipulate the gravitational field around him with the one of a kind Grav-o-Ball (patent pending). Along the way, encounter friends, foes, and other deep spaces oddities -- but be sure to have fun! 
 
 Controls: Use the mouse to drag the Grav-o-Ball around. The gravity is strongest at its center and only exists within its circumference, so be sure to keep the player inside the ball. Navigate around asteroids and find the portal to go to the next level. To pause/unpause the game, click anywhere on the screen or press the esc key on computers.
+
+A note for the ship certification - the demo download has always worked for me so I do not know why it didn't for you the first time I shipped the project. Make sure you are clicking the "begin journey" button on the start page so it doesn't get get stuck there like you wrote.
