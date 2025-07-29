@@ -5,3 +5,11 @@ Controls: Use the mouse to drag the Grav-o-Ball around. The gravity is strongest
 A note for the ship certification - the demo download has always worked for me so I do not know why it didn't for you the first time I shipped the project. Make sure you are clicking the "begin journey" button on the start page so it doesn't get get stuck there like you wrote.
 
 Edit: I think I have fixed the viewport settings so that it will display the full title screen and allow you to proceed through the game. Please let me know if it still does not work.
+
+FEATURES:
+* a fully custom physics engine inside the Godot game engine able to be manipulated by the player
+* 15+ original levels increasing in difficulty
+* 10+ unique interstellar creatures and oddities to interact with throughout your journey
+* a fun star collection system so you can race your friends to collect them all
+* a A time tracking system so you can beat your own PRs
+* a full sound effects library of original sounds to spice up the experience
